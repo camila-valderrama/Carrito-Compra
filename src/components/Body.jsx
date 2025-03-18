@@ -30,7 +30,7 @@ const Body = () => {
   }, []);
 
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='flex flex-col min-h-screen dark:bg-black'>
       {/* Sidebar del carrito */}
       <AnimatePresence initial={false}>
         {isSidebarOpen && (
@@ -48,7 +48,7 @@ const Body = () => {
       </AnimatePresence>
 
       {/* Título */}
-      <h1 className='flex p-10 text-5xl text-red-700 font-bold justify-center'>Tienda Online</h1>
+      <h1 className='flex p-10 text-5xl text-red-700 dark:text-white font-bold justify-center'>Tienda Online</h1>
 
       {/* Botón para abrir el carrito */}
       <ButtonList SidebarOpen={SidebarOpen} />

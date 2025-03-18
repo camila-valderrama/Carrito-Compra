@@ -2,13 +2,13 @@ import { motion } from 'framer-motion'
 
 const Footer = () => {
     return (
-        <footer className="bg-orange-400 text-white py-6 px-10 mt-10">
+        <footer className="bg-orange-400 dark:bg-gray-500 text-white py-6 px-10 mt-10">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
                 {/* Sección de enlaces */}
                 <ul className="space-y-3 mb-5 md:mb-0">
-                    <li className="hover:text-red-800 transition duration-300 cursor-pointer">Nosotros</li>
-                    <li className="hover:text-red-800 transition duration-300 cursor-pointer">Más productos</li>
-                    <li className="hover:text-red-800 transition duration-300 cursor-pointer">Contacto</li>
+                    <li className="hover:text-red-800 dark:hover:text-black transition duration-300 cursor-pointer">Nosotros</li>
+                    <li className="hover:text-red-800 dark:hover:text-black transition duration-300 cursor-pointer">Más productos</li>
+                    <li className="hover:text-red-800 dark:hover:text-black transition duration-300 cursor-pointer">Contacto</li>
                 </ul>
 
                 {/* Redes sociales */}
@@ -17,7 +17,7 @@ const Footer = () => {
                         href="#"
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                        className="hover:text-red-800 transition duration-300"
+                        className="hover:text-red-800 dark:hover:text-black transition duration-300"
                     >
                         <i className="bi bi-instagram"></i>
                     </motion.a>
@@ -26,7 +26,7 @@ const Footer = () => {
                         href="#"
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                        className="hover:text-red-800 transition duration-300"
+                        className="hover:text-red-800 dark:hover:text-black transition duration-300"
                     >
                         <i className="bi bi-facebook"></i>
                     </motion.a>
@@ -35,7 +35,7 @@ const Footer = () => {
                         href="#"
                         whileHover={{ scale: 1.2 }}
                         whileTap={{ scale: 0.9 }}
-                        className="hover:text-red-800 transition duration-300"
+                        className="hover:text-red-800 dark:hover:text-black transition duration-300"
                     >
                         <i className="bi bi-twitter-x"></i>
                     </motion.a>

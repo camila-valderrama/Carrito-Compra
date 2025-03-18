@@ -24,14 +24,17 @@ export const useCart = () => {
     setCart(prevCart => prevCart.filter(item => item.id !== id));
   };
 
-  // Reducir la cantidad de un producto (sin eliminarlo por completo)
+  // Reducir la cantidad de un producto, pero sin bajar de 1
   const decreaseQuantity = (id) => {
     setCart(prevCart =>
       prevCart.map(item =>
-        item.id === id ? { ...item, cantidad: item.cantidad - 1 } : item
-      ).filter(item => item.cantidad > 0) // Elimina si la cantidad llega a 0
+        item.id === id && item.cantidad > 1 // Solo reduce si cantidad > 1
+          ? { ...item, cantidad: item.cantidad - 1 }
+          : item
+      )
     );
   };
 
   return { cart, addToCart, removeFromCart, decreaseQuantity };
 };
+
