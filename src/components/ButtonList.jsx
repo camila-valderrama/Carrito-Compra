@@ -28,4 +28,4 @@ const ButtonList = ({ SidebarOpen }) => {
     );
 };
 
-export default ButtonList;
+export default ButtonList

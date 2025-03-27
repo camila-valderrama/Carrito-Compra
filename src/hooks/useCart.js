@@ -2,7 +2,7 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
 export const useCart = () => {
-  const { cart, setCart } = useContext(CartContext);
+const { cart, setCart } = useContext(CartContext);
 
   // Agregar producto al carrito (sin duplicarlo, aumentando cantidad)
   const addToCart = (product) => {
@@ -35,6 +35,13 @@ export const useCart = () => {
     );
   };
 
-  return { cart, addToCart, removeFromCart, decreaseQuantity };
+  //Vaciar la lista del carrito de compras
+  const emptyCart = () => {
+    setCart(
+      []
+    )
+  }
+
+  return { cart, addToCart, removeFromCart, decreaseQuantity, emptyCart };
 };
 

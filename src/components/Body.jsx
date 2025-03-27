@@ -8,7 +8,7 @@ import { useCart } from '../hooks/useCart'; // Importamos el contexto del carrit
 
 const Body = () => {
   const [products, setProducts] = useState([]);
-  const { cart, addToCart, removeFromCart } = useCart(); // Acceder al carrito
+  const { cart, addToCart, removeFromCart, emptyCart } = useCart(); // Acceder al carrito
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const SidebarOpen = () => {

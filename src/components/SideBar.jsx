@@ -2,7 +2,7 @@ import React from 'react';
 import { useCart } from '../hooks/useCart'; // Importamos el hook del carrito
 
 const SideBar = ({ onClose }) => {
-  const { cart, addToCart, decreaseQuantity, removeFromCart } = useCart();
+  const { cart, addToCart, decreaseQuantity, removeFromCart, emptyCart } = useCart();
   const placeholderImage = 'https://via.placeholder.com/100x150?text=No+Image';
 
   // Calcular el total del carrito
@@ -68,9 +68,21 @@ const SideBar = ({ onClose }) => {
         <div className="mt-4 p-4 bg-white dark:bg-gray-600 rounded-lg shadow-md">
           <h2 className="text-lg font-bold text-red-700 dark:text-white">Total del carrito:</h2>
           <p className="text-xl font-bold text-black">${totalPrice.toFixed(2)}</p>
+      {/* Botón para vaciar el carrito */}
+        <button
+            className="bg-red-600 dark:bg-gray-600 hover:bg-gray-700 dark:hover:bg-black text-white font-medium py-1 px-3 mt-2 rounded-full text-sm"
+            onClick={() => emptyCart()}
+            >
+            Vaciar carrito
+          </button>
         </div>
       )}
+
     </div>
+
+    
+
+
   );
 };
 
